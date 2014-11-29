@@ -96,11 +96,11 @@
       return {
         restrict: 'E',
         require: 'ngModel',
-        template: function(elem, attr) {
+        templateUrl: function(elem, attr) {
           if (attr.template) {
             return attr.template;
           } else {
-            alert('You didn`t provide a template for the datetimepicker!');
+            console.error('You must provide a template for the datetimepicker!');
           }
         },
         scope: {
